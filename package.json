@@ -4,7 +4,7 @@
   "description": "Hello World example",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/sandyiit/hello-world#readme",
   "dependencies": {
+    "chai": "^4.1.2",
     "express": "^4.16.3",
-    "npm": "^6.1.0"
+    "mocha": "^5.2.0",
+    "npm": "^6.1.0",
+    "request": "^2.87.0"
   }
 }
