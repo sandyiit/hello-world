@@ -1,0 +1,23 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Hello World example",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandyiit/hello-world.git"
+  },
+  "author": "Sandeep Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandyiit/hello-world/issues"
+  },
+  "homepage": "https://github.com/sandyiit/hello-world#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "npm": "^6.1.0"
+  }
+}
