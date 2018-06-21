@@ -6,7 +6,7 @@ var should = chai.should();
 
 chai.use(chaiHttp);
 
-describe('Sample Hello World', () => {
+describe('Testing Hello World', () => {
 	it('Root content should be Hello World!', function(done) {
 		chai.request(app)
 		.get('/')
