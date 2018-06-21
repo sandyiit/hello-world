@@ -4,7 +4,8 @@
   "description": "Hello World example",
   "main": "app.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "start": "SET NODE_ENV=dev && node app.js",
+    "test": "mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/sandyiit/hello-world#readme",
   "dependencies": {
     "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
     "express": "^4.16.3",
     "mocha": "^5.2.0",
     "npm": "^6.1.0",

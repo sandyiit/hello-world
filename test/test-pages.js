@@ -1,23 +1,38 @@
+var chai = require('chai');
+var chaiHttp = require('chai-http');
 var expect  = require('chai').expect;
-var request = require('request');
+var app = require("../app.js");
+var should = chai.should();
 
-it('Main page content', function(done) {
-    request('http://localhost:3000' , function(error, response, body) {
-        expect(body).to.eql("Hello World!");
-        done();
-    });
-});
+chai.use(chaiHttp);
 
-it('Main page status', function(done) {
-    request('http://localhost:3000' , function(error, response, body) {
-        expect(response.statusCode).to.equal(200);
-        done();
-    });
-});
+describe('Sample Hello World', () => {
+	it('Root content should be Hello World!', function(done) {
+		chai.request(app)
+		.get('/')
+		.end(function(error, response) {
+			should.not.exist(error);
+			should.exist(response);
+			expect(response.text).to.deep.equal('Hello World!');
+			done();
+		});
+	});
 
-it('About page content', function(done) {
-    request('http://localhost:3000/about' , function(error, response, body) {
-        expect(response.statusCode).to.equal(404);
-        done();
-    });
+	it('Http Status should be 200', function(done) {
+		chai.request(app)
+		.get('/')
+		.end(function(error, response) {
+			expect(response.statusCode).to.equal(200);
+			done();
+		});
+	});
+
+	it('About page Status should be 404', function(done) {
+		chai.request(app)
+		.get('/about')
+		.end(function(error, response) {
+			expect(response.statusCode).to.equal(404);
+			done();
+		});
+	});
 });
