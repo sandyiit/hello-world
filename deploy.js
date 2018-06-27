@@ -8,7 +8,7 @@ var headers = {
   'Content-Type': 'application/json'
 };
 
-var dataString = `{"docker_tag": "${process.env.CIRCLE_BRANCH}"}`;
+var dataString = '{"build": true}';
 
 var options = {
   url: 'https://registry.hub.docker.com/u/' + user + '/' + project + '/trigger/' + token + '/',
