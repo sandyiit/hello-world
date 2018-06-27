@@ -35,10 +35,10 @@ jobs:
         
       # run tests!
       - run: yarn test
-	  
-	  # deploy
-	  - run: 
-		name : deploy to docker hub
-		command: npm run deploy
+
+      # deploy
+      - run: 
+        name : deploy to docker hub
+        command: npm run deploy
 
 
