@@ -26,5 +26,5 @@ function callback(error, response, body) {
   }
 }
 
-console.log('requesting: ' + option.url)
+console.log('requesting: ' + options.url)
 request(options, callback);
