@@ -21,8 +21,9 @@ function callback(error, response, body) {
     console.log(body);
   }
   else {
-	  console.log(error);
-	  console.log(response);
+	  console.log("Error: " + error);
+	  console.log("Status Code: " + response.statusCode);
+	  console.log("Status Message: " + response.statusMessage);
   }
 }
 
