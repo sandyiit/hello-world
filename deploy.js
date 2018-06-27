@@ -1,5 +1,6 @@
 var request = require('request');
 
+var user = process.env.CIRCLE_PROJECT_USERNAME;
 var project = process.env.CIRCLE_PROJECT_REPONAME;
 var token = process.env.DOCKER_HUB_TOKEN;
 
@@ -10,7 +11,7 @@ var headers = {
 var dataString = `{"docker_tag": "${process.env.CIRCLE_BRANCH}"}`;
 
 var options = {
-  url: 'https://registry.hub.docker.com/u/responsive/' + project + '/trigger/' + token + '/',
+  url: 'https://registry.hub.docker.com/u/' + user + '/' + project + '/trigger/' + token + '/',
   method: 'POST',
   headers: headers,
   body: dataString
