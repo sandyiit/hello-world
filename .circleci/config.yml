@@ -38,7 +38,7 @@ jobs:
 
       # deploy
       - run: npm run deploy
-	  
+  
 deployment:
   staging:
     branch: master
